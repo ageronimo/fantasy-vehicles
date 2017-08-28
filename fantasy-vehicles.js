@@ -8,7 +8,15 @@ class Vehicle {
   get vehicleDetails() {
     return `Your vehicle is a ${this.type}, made by ${this.make}, and is ${this.color}.`;
   }
-}
+
+  set color(color) {
+    if (typeof(color) === 'string') {
+      this.color = color;
+    } else {
+      throw new TypeError('Vehicle.color must be a string!');
+    }
+  }
+} 
 
 let bike = new Vehicle('Audi', 'red', 'motorized');
 console.log(bike.vehicleDetails());
@@ -18,8 +26,8 @@ console.log(bike.vehicleDetails());
 class SuperCar extends Vehicle {
   constructor(make, color, type, topSpeed, cost) {
     super(make, color, type);
-    this._topSpeed = topSpeed;
-    this._cost = cost;
+    this.topSpeed = topSpeed;
+    this.cost = cost;
   }
 
   get superCarDetails() {
@@ -28,7 +36,7 @@ class SuperCar extends Vehicle {
 
   set priceTag(cost) {
     if (typeof(cost) === 'number') {
-      this._cost = cost;
+      this.cost = cost;
     } else {
       throw new TypeError('SuperCar.cost must be a number!');
     }
@@ -47,11 +55,11 @@ class Motorcycle extends SuperCar {
 
   set bikeSpeed(newSpeed) {
     if (typeof(newSpeed) === 'number') {
-      this._topSpeed = newSpeed;
+      this.topSpeed = newSpeed;
     } else {
       throw new TypeError('Motorcycle.bikeSpeed must be a number!');
     }
   }
-  
+
 }
 //
