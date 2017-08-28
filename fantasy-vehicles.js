@@ -28,7 +28,7 @@ class SuperCar extends Vehicle {
 
   set priceTag(cost) {
     if (typeof(cost) === 'number') {
-      cost = this._topSpeed;
+      this._cost = cost;
     } else {
       throw new TypeError('SuperCar.cost must be a number!');
     }
@@ -36,5 +36,22 @@ class SuperCar extends Vehicle {
 
 }
 
+class Motorcycle extends SuperCar {
+  constructor(make, color, type, topSpeed, cost) {
+    super(make, color, type, topSpeed, cost)
+  }
 
+  get bikeDetails() {
+    return `${this.vehicleDetails}`
+  }
+
+  set bikeSpeed(newSpeed) {
+    if (typeof(newSpeed) === 'number') {
+      this._topSpeed = newSpeed;
+    } else {
+      throw new TypeError('Motorcycle.bikeSpeed must be a number!');
+    }
+  }
+  
+}
 //
