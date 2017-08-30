@@ -19,7 +19,7 @@ class Vehicle {
 } 
 
 let bike = new Vehicle('Audi', 'red', 'motorized');
-console.log(bike.vehicleDetails());
+console.log(bike.vehicleDetails);
 
 
 // SuperCar is a subclass of Vehicle and has topSpeed and cost added
@@ -44,6 +44,8 @@ class SuperCar extends Vehicle {
 
 }
 
+let car = new SuperCar('Lamborghini', 'yellow', 'luxury', '200mph', '$150,000');
+
 class Motorcycle extends SuperCar {
   constructor(make, color, type, topSpeed, cost) {
     super(make, color, type, topSpeed, cost)
@@ -60,6 +62,7 @@ class Motorcycle extends SuperCar {
       throw new TypeError('Motorcycle.bikeSpeed must be a number!');
     }
   }
-
 }
-//
+
+let motorcycle = new Motorcycle('Motorolla 3000', 'red', 'motorcycle', '130mph', '$35,000');
+ 
