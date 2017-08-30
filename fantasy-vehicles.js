@@ -44,7 +44,7 @@ class SuperCar extends Vehicle {
 
 }
 
-let car = new SuperCar('Lamborghini', 'yellow', 'luxury', '200mph', '$150,000');
+let car = new SuperCar('Lamborghini', 'yellow', 'luxury', 200, '$150,000');
 
 class Motorcycle extends SuperCar {
   constructor(make, color, type, topSpeed, cost) {
@@ -64,5 +64,5 @@ class Motorcycle extends SuperCar {
   }
 }
 
-let motorcycle = new Motorcycle('Motorolla 3000', 'red', 'motorcycle', '130mph', '$35,000');
+let motorcycle = new Motorcycle('Motorolla 3000', 'red', 'motorcycle', 130, '$35,000');
  
