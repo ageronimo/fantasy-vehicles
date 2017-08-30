@@ -52,7 +52,7 @@ class Motorcycle extends SuperCar {
   }
 
   get bikeDetails() {
-    return `${this._vehicleDetails}`
+    return this.vehicleDetails;
   }
 
   set bikeSpeed(newSpeed) {
